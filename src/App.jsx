@@ -1,5 +1,15 @@
+import Hero from "./sections/Hero/Hero";
+import Navbar from "./sections/Navbar";
+import About from "./sections/About/About";
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <About />
+    </>
+  );
 }
 
 export default App;
