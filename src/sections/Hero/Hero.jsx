@@ -1,7 +1,25 @@
 import "./Hero.css";
 import image from "../../assets/selfLove.png";
+import profile from "../../assets/profile.png";
+import { useState } from "react";
+import Modal from "../../components/Modal";
+import { HandleOverflow } from "../../utils/HandleOverflow";
 
 const Hero = () => {
+  // * States
+  const [openModal, setOpenModal] = useState(false);
+
+  // * Methods
+  const OpenModal = () => {
+    setOpenModal(true);
+    HandleOverflow();
+  };
+
+  const CloseModal = () => {
+    setOpenModal(false);
+    HandleOverflow();
+  };
+  // * Render
   return (
     <section
       className="w-screen relative bg-slate-50"
@@ -12,7 +30,9 @@ const Hero = () => {
           <h1 className="text-custom-blue">
             Un espacio seguro para sanar y crecer
           </h1>
-          <button className="py-3 bg-custom-blue">¡Quiero empezar!</button>
+          <button className="py-3 bg-custom-blue" onClick={OpenModal}>
+            ¡Quiero empezar!
+          </button>
         </div>
         <div className="w-2/3" style={{ width: 500, height: 500 }}>
           <img src={image} className="w-full h-full object-contain" />
@@ -31,6 +51,22 @@ const Hero = () => {
           ></path>
         </svg>
       </div>
+
+      {openModal && (
+        <Modal close={CloseModal}>
+          <div className="flex flex-col">
+            <h3 className="text-black">¡Ponete en contacto!</h3>
+            <div className="flex mt-5">
+              <div className="w-36 rounded-full overflow-hidden">
+                <img
+                  src={profile}
+                  className="w-full h-full object-contain object-bottom"
+                />
+              </div>
+            </div>
+          </div>
+        </Modal>
+      )}
     </section>
   );
 };
