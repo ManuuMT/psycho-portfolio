@@ -24,11 +24,11 @@ const Navbar = () => {
           <li onClick={() => ScrollTo("hero")} className="cursor-pointer">
             Inicio
           </li>
-          <li onClick={() => ScrollTo("about")} className="cursor-pointer">
-            Acerca de mi
-          </li>
           <li onClick={() => ScrollTo("services")} className="cursor-pointer">
             Servicios
+          </li>
+          <li onClick={() => ScrollTo("about")} className="cursor-pointer">
+            Acerca de mi
           </li>
         </ul>
       </div>
