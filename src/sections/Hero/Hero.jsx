@@ -66,7 +66,7 @@ const Hero = () => {
             <div className="w-36 rounded-full overflow-hidden">
               <img
                 src={profile}
-                className="w-full h-full object-contain object-bottom"
+                className="w-full h-full object-contain object-bottom saturate-[1.2]"
               />
             </div>
             {/* Datos de contacto */}
