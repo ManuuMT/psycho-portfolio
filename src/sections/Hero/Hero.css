@@ -17,6 +17,25 @@
 }
 
 .wave .shape-fill {
-  /* fill: #ffffff; */
+  fill: rgb(255, 227, 228);
+}
+
+.wave-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-2 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.wave-2 .shape-fill {
   fill: rgb(255, 227, 228);
 }

@@ -9,10 +9,10 @@ const Hero = () => {
     >
       <div className="w-screen h-full flex justify-center items-center relative z-10 gap-10">
         <div className="flex flex-col w-1/3 gap-10">
-          <h1 className="text-sky-950">
+          <h1 className="text-custom-blue">
             Un espacio seguro para sanar y crecer
           </h1>
-          <button className="py-3 bg-sky-950">¡Quiero empezar!</button>
+          <button className="py-3 bg-custom-blue">¡Quiero empezar!</button>
         </div>
         <div className="w-2/3" style={{ width: 500, height: 500 }}>
           <img src={image} className="w-full h-full object-contain" />
