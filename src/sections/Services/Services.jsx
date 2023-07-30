@@ -2,7 +2,10 @@ import boy from "../../assets/boyMeditation.png";
 
 const Services = () => {
   return (
-    <section className="w-screen min-h-screen h-fit relative flex justify-center items-center bg-custom-blue">
+    <section
+      id="services"
+      className="w-screen min-h-screen h-fit relative flex justify-center items-center bg-custom-blue"
+    >
       <div className="w-full flex mt-20 gap-5 max-w-7xl">
         <div className="w-1/2">
           <div className="w-full">

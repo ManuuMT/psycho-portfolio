@@ -6,6 +6,7 @@ import Modal from "../../components/Modal";
 import { HandleOverflow } from "../../utils/HandleOverflow";
 import { BsInstagram, BsWhatsapp } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   // * States
@@ -26,6 +27,7 @@ const Hero = () => {
     <section
       className="w-screen relative bg-slate-50"
       style={{ height: "calc(100vh + 64px)" }}
+      id="hero"
     >
       <div className="w-screen h-full flex justify-center items-center relative z-10 gap-10">
         <div className="flex flex-col w-1/3 gap-10">
@@ -69,18 +71,34 @@ const Hero = () => {
             </div>
             {/* Datos de contacto */}
             <div className="flex flex-col justify-center gap-1">
-              <div className="flex items-center text-black gap-2">
-                <BsWhatsapp size={20} />
-                <p className="text-xl">2284 21 89 48</p>
-              </div>
-              <div className="flex items-center text-black gap-2">
-                <BsInstagram size={20} />
-                <p className="text-xl">psi.luciaindo</p>
-              </div>
-              <div className="flex items-center text-black gap-2">
-                <AiOutlineMail size={20} />
-                <p className="text-xl">luciaindo2@gmail.com</p>
-              </div>
+              <Link
+                to="https://api.whatsapp.com/send?phone=2284218948"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="flex items-center text-black gap-2">
+                  <BsWhatsapp size={20} />
+                  <p className="text-xl">2284 21 89 48</p>
+                </div>
+              </Link>
+              <Link
+                to="https://instagram.com/psi.luciaindo"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="flex items-center text-black gap-2">
+                  <BsInstagram size={20} />
+                  <p className="text-xl">psi.luciaindo</p>
+                </div>
+              </Link>
+              <Link
+                to={`mailto:luciaindo2@gmail.com?subject=Solicitud de entrevista&body=Hola Lucía! Me gustaría agendar un turno con vos para comenzar a hacer terapia...`}
+              >
+                <div className="flex items-center text-black gap-2">
+                  <AiOutlineMail size={20} />
+                  <p className="text-xl">luciaindo2@gmail.com</p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
