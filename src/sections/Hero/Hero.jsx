@@ -4,6 +4,8 @@ import profile from "../../assets/profile.png";
 import { useState } from "react";
 import Modal from "../../components/Modal";
 import { HandleOverflow } from "../../utils/HandleOverflow";
+import { BsInstagram, BsWhatsapp } from "react-icons/bs";
+import { AiOutlineMail } from "react-icons/ai";
 
 const Hero = () => {
   // * States
@@ -38,7 +40,6 @@ const Hero = () => {
           <img src={image} className="w-full h-full object-contain" />
         </div>
       </div>
-
       <div className="wave">
         <svg
           data-name="Layer 1"
@@ -51,22 +52,39 @@ const Hero = () => {
           ></path>
         </svg>
       </div>
-
-      {openModal && (
-        <Modal close={CloseModal}>
-          <div className="flex flex-col">
-            <h3 className="text-black">¡Ponete en contacto!</h3>
-            <div className="flex mt-5">
-              <div className="w-36 rounded-full overflow-hidden">
-                <img
-                  src={profile}
-                  className="w-full h-full object-contain object-bottom"
-                />
+      <Modal isOpen={openModal} close={CloseModal}>
+        <div className="flex flex-col w-[500px]">
+          <h3 className="text-black">¡Ponete en contacto!</h3>
+          <p className="text-black">
+            Animate a comenzar tu proceso de autodescrubimiento de la mano de
+            una profesional de la salud mental
+          </p>
+          <div className="flex mt-5 gap-10">
+            {/* Foto de perfil */}
+            <div className="w-36 rounded-full overflow-hidden">
+              <img
+                src={profile}
+                className="w-full h-full object-contain object-bottom"
+              />
+            </div>
+            {/* Datos de contacto */}
+            <div className="flex flex-col justify-center gap-1">
+              <div className="flex items-center text-black gap-2">
+                <BsWhatsapp size={20} />
+                <p className="text-xl">2284 21 89 48</p>
+              </div>
+              <div className="flex items-center text-black gap-2">
+                <BsInstagram size={20} />
+                <p className="text-xl">psi.luciaindo</p>
+              </div>
+              <div className="flex items-center text-black gap-2">
+                <AiOutlineMail size={20} />
+                <p className="text-xl">luciaindo2@gmail.com</p>
               </div>
             </div>
           </div>
-        </Modal>
-      )}
+        </div>
+      </Modal>
     </section>
   );
 };
